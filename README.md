@@ -1,30 +1,22 @@
-# React + TypeScript + Vite
+# Aplicativo de Notas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um componente React para criar notas de forma interativa, permitindo a criação de notas de texto ou por meio de gravação de áudio convertido automaticamente em texto.
 
-Currently, two official plugins are available:
+## Funcionalidades Principais
+* Criação de notas de texto.
+* Gravação de notas em áudio, convertidas automaticamente em texto.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Dependências
+* @radix-ui/react-dialog: Utilizado para criar o diálogo de criação de nota.
+* lucide-react: Fornece o ícone de fechamento para fechar o diálogo.
+* react: Biblioteca de construção de interfaces do usuário.
+* sonner: Biblioteca utilizada para exibir notificações de toast.
 
-## Expanding the ESLint configuration
+## Comportamento
+* Ao clicar no botão "Adicionar nota", um diálogo será exibido.
+* O usuário pode começar a gravar uma nota em áudio clicando no botão "gravando uma nota" ou escrever texto diretamente no campo de texto.
+* Ao terminar de gravar ou digitar, o usuário pode salvar a nota clicando no botão "Salvar nota".
+* Notificações de toast serão exibidas para informar o usuário sobre o status da operação (sucesso ou erro).
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Suporte
+Este componente utiliza a API de Reconhecimento de Fala, portanto, é necessário que o navegador do usuário ofereça suporte a essa API.
